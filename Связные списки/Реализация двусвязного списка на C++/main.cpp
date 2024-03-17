@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+#include <windows.h> // исключительно для 12 строчки в main()
 #include "DoubleLinkedList.h"
 
 int generate_random_number(int a, int b) { // функция генерации случайных чисел
@@ -7,7 +8,8 @@ int generate_random_number(int a, int b) { // функция генерации 
 }
 
 int main () {
-
+    
+    SetConsoleOutputCP(CP_UTF8); // для отображения русского языка в консоли
     DoubleLinkedList<int> myList_1;
 
     std::cout << "Введите диапазон значений и количество значений" << std::endl;
